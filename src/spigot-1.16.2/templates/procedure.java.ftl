@@ -19,7 +19,6 @@ public class ${name}Procedure implements org.bukkit.event.Listener {
 					? (int) dependencies.get("${dependency.getName()}") : (double) dependencies.get("${dependency.getName()}");
 			<#elseif dependency.getType(generator.getWorkspace()) == "Entity">
 			${dependency.getType(generator.getWorkspace())} ${dependency.getName()} = (${dependency.getType(generator.getWorkspace())}) dependencies.get("${dependency.getName()}");
-			org.bukkit.entity.Player player = (Player) entity;
 			<#else>
             	${dependency.getType(generator.getWorkspace())} ${dependency.getName()} = (${dependency.getType(generator.getWorkspace())}) dependencies.get("${dependency.getName()}");
 			</#if>
